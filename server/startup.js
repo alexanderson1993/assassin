@@ -1,15 +1,3 @@
-Meteor.startup(function() {
-	var id;
-	if (typeof Meteor.users.findOne({username:'admin'}) === 'undefined'){
-		id = Accounts.createUser({
-			username:'admin',
-			email:'alex@infinitedev.com',
-			password:'voyager1'
-		});
-		Roles.addUserToRoles( id, ['admin'] );
-	}
-});
-
 Accounts.onCreateUser(function(options, user) {
 	//Construct the profile
 	//Start with Google
