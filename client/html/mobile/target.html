@@ -1,0 +1,31 @@
+<template name="target">
+	{{> header}}
+	{{#ionView}}
+	{{#ionContent}}
+	<div class="card">
+
+		{{#with target}}
+		<div class="item item-image">
+		<h1 class="text-center">YOUR TARGET</h1>
+			<div class="row">
+				<div class="col-25"></div>
+				<div class="col-50">
+					<img style="border-radius:50%;" src="{{picture}}">
+				</div>
+			</div>
+			<h1>{{name}}</h1>
+		</div>
+		{{#unless unknown}}
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Secret Code</span>
+			<input type="text" id="code" placeholder="Secret Code">
+		</label>
+		<div class="item item-text-wrap text-center">
+			<button class="button button-block button-assertive assassinate" type="button">Assassinate!</button>
+		</div>
+		{{/unless}}
+		{{/with}}
+	</div>
+	{{/ionContent}}
+	{{/ionView}}
+</template>

@@ -1,0 +1,9 @@
+{
+  "public": {
+
+  },
+  "email": {
+    "from": "noreply@shankyou.me",
+    "notifyTo": ["alex@infinitedev.com"]
+  }
+}

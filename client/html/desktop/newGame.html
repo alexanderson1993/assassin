@@ -1,0 +1,26 @@
+<template name="newGame">
+	<div class="col-sm-8 col-sm-offset-2">
+		<div class="card">
+			<div class="item item-text-wrap">
+				<h1>New Game</h1>
+				<p>Fill out all of the fields. Be sure to include specific instructions so your players know what the rules of your game are, including how to eliminate other players.</p>
+			</div>
+			<div class="item item-text-wrap">
+				<div class="form-group">
+					<label>Name</label>
+					<input type="text" class="form-control" name="name" />
+				</div>
+				<div class="form-group">
+					<label>Instructions</label>
+					<textarea rows="5" class="form-control" name="description" ></textarea>
+				</div>
+				<div class="form-group">
+					<label>Start Date</label>
+					<input type="text" class="form-control datepicker" name="startdate" />
+				</div>
+				<button class="btn btn-success pull-right createGame">Create Game</button>
+			</div>
+
+		</div>
+	</div>
+</template>

@@ -1,0 +1,17 @@
+<template name="_tabs">
+  {{#if isAndroid}}
+    {{#ionTabs style="android" class="tabs-background-positive tabs-color-light"}}
+      {{> ionTab title="Target" path="target" iconOff="ios-circle-outline" iconOn="pinpoint"}}
+      {{> ionTab title="Game" path="game" iconOff="ios-game-controller-b-outline" iconOn="ios-game-controller-b"}}
+      {{> ionTab title="Profile" path="profile" iconOff="ios-person-outline" iconOn="ios-person"}}
+      <!-- {{> ionTab title="Chat" path="chat" iconOff="android-chat" iconOn="android-chat"}}-->
+    {{/ionTabs}}
+    {{else}}
+    {{#ionTabs style="ios"}}
+      {{> ionTab title="Target" path="target" iconOff="ios-circle-outline" iconOn="pinpoint"}}
+      {{> ionTab title="Game" path="game" iconOff="ios-game-controller-b-outline" iconOn="ios-game-controller-b"}}
+      {{> ionTab title="Profile" path="profile" iconOff="ios-person-outline" iconOn="ios-person"}}
+     <!-- {{> ionTab title="Chat" path="chat" iconOff="ios-chatboxes-outline" iconOn="ios-chatboxes"}}-->
+    {{/ionTabs}}
+  {{/if}}
+</template>

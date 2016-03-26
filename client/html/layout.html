@@ -1,0 +1,43 @@
+<head>
+	<title>Assassin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-title" content="Assassin">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon" href="icons/icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="icons/icon-retina.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="icons/icon-ipad.png" />
+	<link rel="apple-touch-startup-image" href="/startup.png">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	{{> sAlert}}
+</body>
+
+<template name="layout">
+	{{#ionBody}}
+
+	{{> ionNavBar class="bar-positive"}}
+
+	{{#ionNavView}}
+	
+	{{> yield}}
+	{{> _tabs}}
+	{{/ionNavView}}
+
+	{{/ionBody}}
+</template>
+
+<template name="desktop">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				{{> navbar}}
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		{{> yield}}
+	</div>
+</template>

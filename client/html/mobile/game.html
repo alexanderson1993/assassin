@@ -1,0 +1,48 @@
+<template name="game">
+	{{> header}}
+	{{#ionView}}
+	{{#ionContent}}
+	<div class="card">
+		<div class="item item-text-wrap">
+			<h1 class="text-center">{{name}}</h1>
+			{{#if winner}}
+			This game is finished.
+			{{else}}
+			<p>{{{description}}}</p>
+			{{#unless started}}
+			<p>Game starts:{{date}}</p>
+			<small class="text-center">Other people can join this game by visiting<br /><a href="/join?id={{_id}}">http://shankyou.me/join?id={{_id}}</a><br />or by using the following secret code:<br />{{slug}}</small>
+			{{/unless}}
+			{{/if}}
+		</div>
+		{{#unless stealthMode}}
+		<div class="item item-text-wrap">
+			<h3>Participants</h3>
+			{{#ionList}}
+			{{#each participant}}
+			<a href="/profile/{{_id}}">
+				{{#ionItem avatar=true}}
+				<div class="image" style="background-image:url({{picture}})"></div>
+				<h2>{{name}}</h2>
+				<p>
+					{{#unless dead}}
+					Kills: {{kills}}
+					{{else}}
+					Dead - Kills: {{kills}}
+					{{/unless}}
+				</p>
+				{{/ionItem}}
+			</a>
+			{{/each}}
+			{{/ionList}}
+		</div>
+		{{else}}
+		<div class="item item-text-wrap">
+			<h4>Participants: {{participantCount}}</h4>
+			<h4>Dead: {{deadCount}}</h4>
+		</div>
+		{{/unless}}
+	</div>
+	{{/ionContent}}
+	{{/ionView}}
+</template>

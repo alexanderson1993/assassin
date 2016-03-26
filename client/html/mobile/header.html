@@ -1,0 +1,19 @@
+<template name="header">
+	{{#if isAndroid}}
+
+	{{#contentFor "headerButtonRight"}}
+	<button class="button button-clear aboutbutton" data-ion-modal="_gameList">My Games</button>
+	{{/contentFor}}
+
+	{{else}}
+
+	{{#contentFor "headerButtonLeft"}}
+	<button class="button button-clear aboutbutton" data-ion-modal="_gameList">My Games</button>
+	{{/contentFor}}
+
+	{{/if}}
+
+	{{#contentFor "headerTitle"}}
+	<h1 class="title title-center"><a href="/">ShankYou</a></h1>
+	{{/contentFor}}
+</template>

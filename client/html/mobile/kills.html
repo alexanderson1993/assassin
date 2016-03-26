@@ -1,0 +1,17 @@
+<template name="kills">
+	{{#ionList}}
+
+	{{#each kills}}
+	<a href="#">
+		{{#ionItem avatar=true}}
+		<div class="image" style="background-image:url({{image}})"></div>
+		<h2>{{name}}</h2>
+		<p>
+			{{subtext}}
+		</p>
+		{{/ionItem}}
+	</a>
+	{{/each}}
+
+	{{/ionList}}
+</template>

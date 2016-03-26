@@ -1,0 +1,31 @@
+<template name="profile_desktop">
+	<div class="col-sm-6 col-sm-offset-3">
+
+		<div class="card">
+			<div class="item item-image">
+				<div class="row">
+					<div class="col-25"></div>
+					<div class="col-50">
+						<img style="border-radius:50%;" src="{{profile.picture}}">
+					</div>
+				</div>
+				<h1>{{profile.name}}</h1>
+			</div>
+			<div class="item item-text-wrap">
+				{{#if isUser}}<h3 class="text-center">Secret Code: {{secretCode}}</h3>{{/if}}
+				<p class="subdued">Kills: {{killCount}}</p>
+				<p class="subdued">Killed: {{killed}}</p>
+			</div>
+			{{#if isUser}}
+			<div class="item item-text-wrap text-center">
+				<button class="button button-block button-energized logout" type="button">Logout</button>
+			</div>
+			{{#unless dead}}
+			<div class="item item-text-wrap text-center">
+				<button class="button button-block button-assertive surrender" type="button">Surrender</button>
+			</div>
+			{{/unless}}
+			{{/if}}
+		</div>
+	</div>
+</template>

@@ -1,0 +1,37 @@
+<template name="game_desktop">
+	<div class="col-sm-6 col-sm-offset-3">
+		<div class="card" style="overflow: scroll; height: 80vh;">
+			<div class="item item-text-wrap">
+				<h1 class="text-center">{{name}}</h1>
+				<p>{{{description}}}</p>
+				<p>Game starts:{{date}}</p>
+				<small class="text-center">Other people can join this game by visiting<br /><a href="/join?id={{_id}}">http://shankyou.me/join?id={{_id}}</a><br />or by using the following secret code:<br />{{slug}}</small>
+			</div>
+			{{#unless stealthMode}}
+			<div class="item item-text-wrap">
+				<h3>Participants</h3>
+				{{#each participant}}
+				<a href="/profile/{{_id}}">
+					{{#ionItem avatar=true}}
+					<div class="image" style="background-image:url({{picture}})"></div>
+					<h2>{{name}}</h2>
+					<p>
+						{{#unless dead}}
+						Kills: {{kills}}
+						{{else}}
+						Dead - Kills: {{kills}}
+						{{/unless}}
+					</p>
+					{{/ionItem}}
+				</a>
+				{{/each}}
+			</div>
+			{{else}}
+			<div class="item item-text-wrap">
+				<h4>Participants: {{participantCount}}</h4>
+				<h4>Dead: {{deadCount}}</h4>
+			</div>
+			{{/unless}}
+		</div>
+	</div>
+</template>

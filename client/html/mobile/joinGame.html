@@ -1,0 +1,19 @@
+<template name="joinGame">
+	{{> header}}
+	{{#ionView}}
+	{{#ionContent}}
+	<div class="card">
+		<div class="item item-text-wrap text-center">
+			<h1>Join Game</h1>
+			<p class="subdued">Type in the secret code for the game you want to join.</p>
+		</div>
+		<div class="item item-text-wrap text-center">
+			<label class="item item-input">
+				<input type="text" id="code" placeholder="Secret Code">
+			</label>
+			<button class="button button-block button-energized join" type="button">Join</button>
+		</div>
+	</div>
+	{{/ionContent}}
+	{{/ionView}}
+</template>

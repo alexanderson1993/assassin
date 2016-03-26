@@ -1,0 +1,22 @@
+<template name="gameOver">
+	{{> header}}
+	{{#ionView}}
+	{{#ionContent}}
+	<div class="card">
+		<h1 class="text-center">Game Over</h1>
+		<h2 class="text-center">Winner:</h2>
+		{{#with gameWinner}}
+		<div class="item item-image">
+			<div class="row">
+				<div class="col-25"></div>
+				<div class="col-50">
+					<img style="border-radius:50%;" src="{{picture}}">
+				</div>
+			</div>
+			<h1>{{name}}</h1>
+		</div>
+		{{/with}}
+	</div>
+	{{/ionContent}}
+	{{/ionView}}
+</template>

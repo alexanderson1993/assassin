@@ -1,0 +1,26 @@
+<template name="_gameList">
+	{{#ionModal title="Active Games"}}
+		{{#ionContent}}
+		{{#ionList}}
+		<a href="/join">
+			{{#ionItem}}
+			<h2>Join New Game</h2>
+			<p>
+				Ready to start killing?
+			</p>
+			{{/ionItem}}
+		</a>
+		{{#each games}}
+		<a href="#" class="game">
+			{{#ionItem}}
+			<h2>{{name}}</h2>
+			<p>
+				{{description}}
+			</p>
+			{{/ionItem}}
+		</a>
+		{{/each}}
+		{{/ionList}}
+		{{/ionContent}}
+	{{/ionModal}}
+</template>

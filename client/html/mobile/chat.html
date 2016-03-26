@@ -1,0 +1,38 @@
+<template name="chat">
+	{{> header}}
+
+	{{#ionView}}
+	{{#ionContent}}
+	<div class="row row-top chatMessages-outer">
+		<div class="chatMessages">
+			{{#ionList}}
+			{{#each messages}}
+			<a href="#">
+				{{#ionItem avatar=true}}
+				<div class="image" style="background-image:url({{picture}})"></div>
+				<h6>{{name}}</h6>
+				<p class="messageContent">
+					{{message}}
+				</p>
+				<p class="pull-right">{{timestamp}}</p>
+				{{/ionItem}}
+			</a>
+			{{/each}}
+
+			{{/ionList}}
+		</div>
+	</div>
+	<div class="bar chat item-input-inset" style="position:fixed;">
+		<label class="item-input-wrapper">
+			<i class="icon ion-ios-chatbubble placeholder-icon"></i>
+			<input id="messageContent" type="search" placeholder="Message">
+		</label>
+		<button class="button button-clear send button-positive">
+			Send
+		</button>
+	</div>
+
+	{{/ionContent}}
+	{{/ionView}}
+
+</template>
